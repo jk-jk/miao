@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -21,27 +21,21 @@
       margin-right:auto;  
       list-style:none;
       padding-left:0px;
+      word-spacing:24px;
     }
     .内容 li{
-      background-color: pink;
+      display:inline-block;
       box-sizing:border-box;
       width:180px;
-      border:3px solid;
       height:40px;
+      border:3px solid;
       margin-top:15px;
-      line-height: 34px;               
+      background-color: pink;
+      
     }
-    .内容 li:nth-child(n+5){
-      margin-left:210px;  
+    .内容 li:hover{
+      background-color: red;
     }
-    .内容 li:nth-child(n+9){
-      margin-left:420px;
-    }
-
-    .内容 li:nth-child(4n+5){
-      margin-top:-205px;
-    }
-
     .link{
       overflow:hidden;
     }
@@ -60,10 +54,10 @@
       margin-right:auto;
       width:300px;
       text-align:center;
-    }
+    }   
   </style>
 </head>
-<body> 
+<body>
   <div class="h1" >
   <h1>hello</h1>
   </div>
