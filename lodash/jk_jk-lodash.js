@@ -1,4 +1,4 @@
-var <jk_jk> = {
+var jk_jk = {
   chunk: function(array, size) {
 
   }
