@@ -33,9 +33,9 @@ var jk_jk = {
     return res
   },
 
-  difference: function(array, values){
+  difference: function(array, ...values){
     let res = []
-    let ary = [].concat(values)
+    let ary = [].concat(...values)
     for (let a of array){
       if(!ary.includes(a)){
         res.push(a)
@@ -45,7 +45,7 @@ var jk_jk = {
   },
 
   drop: function(array,n = 1){
-    return array.silce(n)
+    return array.slice(n)
   },
 
   dropRight: function(array, n = 1){
@@ -55,6 +55,6 @@ var jk_jk = {
     return array.slice(0,-n)
   },
 
-  
+
 
 }
