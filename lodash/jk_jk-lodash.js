@@ -90,8 +90,11 @@ var jk_jk = {
     }
 
     return result
-  }
+  },
 
+  identity: function (v){
+    return v
+  }
 
 
 
