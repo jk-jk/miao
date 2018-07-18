@@ -144,9 +144,29 @@ var jk_jk = {
       res = res + item + separator 
     })
     return res.slice(0, -1)
-  
-  }
+  },
 
+  last: function(array){
+    return array[array.length - 1]
+  },
+
+  lastIndexOf: function(array, value, fromIndex = array.length - 1){
+    if( arguments.length == 2){
+      for(let i = fromIndex;i >= 0;i--){
+        if( array[i] === value){
+          return i
+        }      
+      }
+    } else {
+      for(let i = array.length - fromIndex;i >= 0;i--){
+        if( array[i] === value){
+          return i
+        }      
+      }    
+    }
+    return -1  
+  }
+  
 
 
 
