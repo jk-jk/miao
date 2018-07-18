@@ -96,7 +96,23 @@ var jk_jk = {
     return v
   },
 
+  fill: function(array, value, start = 0, end = array.length){
+    var res = array
+    for(var i = start;i < end;i++){
+      res[i] = value
+    }
+    return res
+  },
 
+  fromPairs: function(array){
+    var res = {}
+    array.forEach(item => res[item[0]] = item[1])
+    return res
+  }
+
+  head: function array => array[0],
+  
+  
 
 
 
