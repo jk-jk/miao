@@ -108,7 +108,7 @@ var jk_jk = {
     var res = {}
     array.forEach(item => res[item[0]] = item[1])
     return res
-  }
+  },
 
   head: function array => array[0],
   
