@@ -94,6 +94,13 @@ var jk_jk = {
 
   identity: function (v){
     return v
+  },
+
+  property: function (propName) {
+    return fucntion(obj){
+      return obj[propName]
+    }
+
   }
 
 
