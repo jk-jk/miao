@@ -96,12 +96,7 @@ var jk_jk = {
     return v
   },
 
-  property: function (propName) {
-    return fucntion(obj){
-      return obj[propName]
-    }
 
-  }
 
 
 
