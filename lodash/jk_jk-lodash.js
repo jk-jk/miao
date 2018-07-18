@@ -151,22 +151,18 @@ var jk_jk = {
   },
 
   lastIndexOf: function(array, value, fromIndex = array.length - 1){
-    if( arguments.length == 2){
-      for(let i = fromIndex;i >= 0;i--){
-        if( array[i] === value){
-          return i
-        }      
-      }
-    } else {
-      for(let i = array.length - fromIndex;i >= 0;i--){
-        if( array[i] === value){
-          return i
-        }      
-      }    
+    if( fromIndex < 0){
+      fromindex += array.length
     }
+    for(let i = fromIndex;i >= 0;i--){
+        if( array[i] === value){
+          return i
+        }      
+    }
+     
     return -1  
   }
-  
+
 
 
 
