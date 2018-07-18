@@ -31,5 +31,30 @@ var jk_jk = {
       }
     }
     return res
-  }
+  },
+
+  difference: function(array, values){
+    let res = []
+    let ary = [].concat(values)
+    for (let a of array){
+      if(!ary.includes(a)){
+        res.push(a)
+      }
+    }
+    return res
+  },
+
+  drop: function(array,n = 1){
+    return array.silce(n)
+  },
+
+  dropRight: function(array, n = 1){
+    if(n == 0){
+      return array
+    }
+    return array.slice(0,-n)
+  },
+
+  
+
 }
