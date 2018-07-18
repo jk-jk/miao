@@ -55,6 +55,44 @@ var jk_jk = {
     return array.slice(0,-n)
   },
 
+  flatten:  function(ary){
+    var res = [].concat(...ary)
+    return res
+
+  },
+
+  flattenDeep: function(ary) {
+    var result = []
+    for(var i = 0;i < ary.length;i++){
+      if(Array.isArray(ary[i])){
+        var temp = flattenDeep(ary[i])
+        result = [..result, ...temp]
+      } else{
+        result.push(ary[i])
+      }
+    }
+    return result
+  },
+
+  flattenDepth: function(ary, depth = 1) {
+    if (depth === 0) {
+      return ary.slice()//[...ary]
+    }
+    var result = []
+
+    for(var i = 0;i<ary.length;i++) {
+      if (Array.isArray(ary[i])) {
+        var tmp = flattenDepth(ary[i], depth - 1)
+        result = [...result, ...tmp]
+      } else {
+        result.push(ary[i])
+      }
+    }
+
+    return result
+  }
+
+
 
 
 }
