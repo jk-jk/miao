@@ -152,7 +152,7 @@ var jk_jk = {
 
   lastIndexOf: function(array, value, fromIndex = array.length - 1){
     if( fromIndex < 0){
-      fromindex += array.length
+      fromIndex += array.length
     }
     for(let i = fromIndex;i >= 0;i--){
         if( array[i] === value){
@@ -161,7 +161,9 @@ var jk_jk = {
     }
      
     return -1  
-  }
+  },
+
+
 
 
 
