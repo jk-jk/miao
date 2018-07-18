@@ -136,6 +136,15 @@ var jk_jk = {
       }
     })
     return res
+  },
+
+  join: function(array, separator =','){
+    var res = ''
+    array.forEach(item =>{
+      res = res + item + separator 
+    })
+    return res.slice(0, -1)
+  
   }
 
 
