@@ -66,7 +66,7 @@ var jk_jk = {
     for(var i = 0;i < ary.length;i++){
       if(Array.isArray(ary[i])){
         var temp = flattenDeep(ary[i])
-        result = [..result, ...temp]
+        result = [...result, ...temp]
       } else{
         result.push(ary[i])
       }
