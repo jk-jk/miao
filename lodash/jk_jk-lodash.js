@@ -61,7 +61,7 @@ var jk_jk = {
 
   },
 
-  flattenDeep: function(ary) {
+  flattenDeep: function flattenDeep(ary) {
     var result = []
     for(var i = 0;i < ary.length;i++){
       if(Array.isArray(ary[i])){
@@ -74,7 +74,7 @@ var jk_jk = {
     return result
   },
 
-  flattenDepth: function(ary, depth = 1) {
+  flattenDepth: function flattenDepth(ary, depth = 1) {
     if (depth === 0) {
       return ary.slice()//[...ary]
     }
