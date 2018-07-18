@@ -110,7 +110,7 @@ var jk_jk = {
     return res
   },
 
-  head: array => return array[0],
+  head: array => {return array[0]},
   
   indexOf: function (array, value, fromIndex = 0){
     for(let i = fromIndex;i < array.length;i++){
@@ -127,6 +127,16 @@ var jk_jk = {
     return array
   },
 
+  intersection: function(arrays,...Array){
+    let ary = [].concat(...Array)
+    let res = []
+    arrays.forEach(item => {
+      if(ary.indexOf(item) !== -1){
+        res.push(item)
+      }
+    })
+    return res
+  }
 
 
 
