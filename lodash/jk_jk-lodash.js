@@ -195,7 +195,7 @@ var jk_jk = {
 
   reverse: function(array){
     var res = []
-    for(var i = array,length -1 ; i >= 0 ; i--){
+    for(var i = array.length -1 ; i >= 0 ; i--){
       res.push(i)
     }
     return res
