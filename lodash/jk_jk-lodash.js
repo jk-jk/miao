@@ -163,6 +163,76 @@ var jk_jk = {
     return -1  
   },
 
+  nth: function(array, index = 0){
+    if (index >= 0 ){
+      return array[index]
+    } else {
+      return array[array.length + index]
+    }
+  },
+
+  pull: function(array, ...values){
+   
+    var res = []
+    for(var i = 0; i < array.length; i++){
+      if( !values.includes(array[i])){
+        res.push(array[i])
+      }
+    }
+    return res 
+  },
+
+  pullAll: function(array, values){
+   
+    var res = []
+    for(var i = 0; i < array.length; i++){
+      if( !values.includes(array[i])){
+        res.push(array[i])
+      }
+    }
+    return res 
+  },
+
+  reverse: function(array){
+    var res = []
+    for(var i = array,length -1 ; i >= 0 ; i--){
+      res.push(i)
+    }
+    return res
+  },
+
+  sortedindex: function(array, value){
+    var l = 0
+    var r = array.length - 1 
+    var mid
+    return search(l,r,value)    
+    function search (l , r, value){
+      mid = (l + r) / 2 | 0
+      if(value > array[r]){
+        return r
+      }
+      if(value < array[l]){
+        return l
+      }
+      if(l == r){
+        return l
+
+      }
+      if( value > array[mid] && value <= array[mid] + 1){
+        return mid
+      }
+      if(value > array[mid]){
+        l = mid
+
+        return search(l , r,value)
+      }  else {
+        r = mid
+        return search(l , r,value)
+      }
+    }    
+    
+  },
+
 
 
 
