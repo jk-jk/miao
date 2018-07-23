@@ -196,12 +196,12 @@ var jk_jk = {
   reverse: function(array){
     var res = []
     for(var i = array.length -1 ; i >= 0 ; i--){
-      res.push(i)
+      res.push(array[i])
     }
     return res
   },
 
-  sortedindex: function(array, value){
+  sortedIndex: function(array, value){
     var l = 0
     var r = array.length - 1 
     var mid
