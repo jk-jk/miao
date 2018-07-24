@@ -274,7 +274,10 @@ var jk_jk = {
 
   take: function(array, n=1){
     let res = []
-    for(var i = 0;i < array.length;i++){
+    if(n > array.length){
+      n = array.length
+    }
+    for(var i = 0;i < n;i++){
       res.push(array[i])
     }
     return res
@@ -301,8 +304,8 @@ var jk_jk = {
     var result = []
     for(var i = 0; i < array.length; i++){
       if(!result.includes(array[i]))
-      result.push(array[i])
-    } 
+        result.push(array[i])
+      } 
     return result 
   },
 
