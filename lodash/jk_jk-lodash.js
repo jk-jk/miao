@@ -280,5 +280,22 @@ var jk_jk = {
     return res
   },
 
+  takeRight: function(array, n=1){
+    if(n > array.length){
+      return array
+    }
+    return array.slice(array.length - n)
+  },
+
+  union: function(...arrays){
+    var res = []
+    res = res.concat(...arrays)
+    var result = []
+    for(var i = 0; i < res.length; i++){
+      if(!result.includes(res[i]))
+      result.push(res[i])
+    }
+    return result
+  },
 
 }
