@@ -204,33 +204,20 @@ var jk_jk = {
   sortedIndex: function(array, value){
     var l = 0
     var r = array.length - 1 
-    var mid
-    return search(l,r,value)    
-    function search (l , r, value){
-      mid = (l + r) / 2 | 0
-      if(value > array[r]){
-        return r
-      }
-      if(value < array[l]){
-        return l
-      }
-      if(l == r){
-        return l
-
-      }
-      if( value > array[mid] && value <= array[mid] + 1){
-        return mid
-      }
-      if(value > array[mid]){
-        l = mid
-
-        return search(l , r,value)
-      }  else {
-        r = mid
-        return search(l , r,value)
-      }
-    }    
     
+    if(array[r] < value){
+      return r + 1
+    }    
+    while(l < r){
+      var mid = (l + r) / 2 | 0
+      if(array[mid] < value){
+        l = mid + 1
+      } else {
+        r = mid
+      }
+    }
+    return l
+ 
   },
 
 
