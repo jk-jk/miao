@@ -243,7 +243,7 @@ var jk_jk = {
 
   sortedLastIndexOf: function(array, value){
     for(var i = array.length - 1;i >= 0;i--){
-      if(array[i] = value){
+      if(array[i] == value){
         return i
       }
     }
@@ -272,7 +272,7 @@ var jk_jk = {
     return  array
   },
 
-  take: function(array, [n=1]){
+  take: function(array, n=1){
     let res = []
     for(var i = 0;i < n;i++){
       res.push(array[i])
