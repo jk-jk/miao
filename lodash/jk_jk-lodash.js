@@ -242,7 +242,12 @@ var jk_jk = {
    },
 
   sortedLastIndexOf: function(array, value){
-    return jk_jk.sortedLastIndex(array, value)
+    for(var i = array.length - 1;i >= 0;i--){
+      if(array[i] = value){
+        return i
+      }
+    }
+    return -1
   },
 
 
@@ -251,7 +256,16 @@ var jk_jk = {
   },
 
 
-
+  sortedUniqBy: function(array, iteratee){
+    var res = [-99999]
+    for(var i = 0; i < array.length;i++){
+      if(iteratee(array[i]) > iteratee(res[res.length - 1])){
+        res.push(array[i])
+      }
+    }
+    res.shift()
+    return res
+  },
 
 
 
