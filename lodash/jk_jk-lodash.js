@@ -219,6 +219,36 @@ var jk_jk = {
     return l
  
   },
+  sortedIndexOf: function(array, value){
+    return jk_jk.sortedIndex(array, value)
+  },
+
+  sortedLastIndex: function(array, value){
+    var l = 0
+    var r = array.length - 1 
+    
+    if(array[r] <= value){
+      return r + 1
+    }    
+    while(l < r){
+      var mid = (l + r) / 2 | 0
+      if(array[mid] <= value){
+        l = mid + 1
+      } else {
+        r = mid
+      }
+    }
+    return l
+   },
+
+  sortedLastIndexOf: function(array, value){
+    return jk_jk.sortedLastIndex(array, value)
+  },
+
+
+  sortedUniq: function(array){
+    return array.filter((item, index) => item !== array[index - 1])
+  },
 
 
 
