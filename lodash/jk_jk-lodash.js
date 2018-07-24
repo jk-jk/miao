@@ -267,6 +267,18 @@ var jk_jk = {
     return res
   },
 
+  tail: function(array){
+    array.shift()
+    return  array
+  },
+
+  take: function(array, [n=1]){
+    let res = []
+    for(var i = 0;i < n;i++){
+      res.push(array[i])
+    }
+    return res
+  },
 
 
 }
