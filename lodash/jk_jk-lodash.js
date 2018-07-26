@@ -309,4 +309,31 @@ var jk_jk = {
     return result 
   },
 
+
+  zip: function(...arrays){
+    var s = []
+    s.push(...arrays)
+    let res = []
+    for(var i = 0; i < s[0].length;i++){
+      var r = []
+      for (var j = 0;j < s.length;j++){
+        r.push(s[j][i])
+      }
+      res.push(r)
+    }
+    return res
+  },
+
+
+  unzip: function(...array){
+    return jk_jk.zip(...array)
+  },
+
+  without: function(array, ...values){
+    
+    return array.filter(item => !values.includes(item))
+  },
+
+  
+
 }
